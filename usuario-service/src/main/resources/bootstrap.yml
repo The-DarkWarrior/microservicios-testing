@@ -1,9 +1,7 @@
-server:
-  port: 8001
 spring:
   application:
     name: usuario-service
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8001
+      uri: http://localhost:8081

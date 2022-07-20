@@ -2,7 +2,7 @@ server:
   port: 8002
 spring:
   application:
-    name: carro-servive
+    name: carro-service
   cloud:
     config:
       enabled: true

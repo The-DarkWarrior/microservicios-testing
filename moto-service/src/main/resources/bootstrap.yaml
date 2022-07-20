@@ -2,7 +2,7 @@ server:
   port: 8003
 spring:
   application:
-    name: moto-servive
+    name: moto-service
   cloud:
     config:
       enabled: true

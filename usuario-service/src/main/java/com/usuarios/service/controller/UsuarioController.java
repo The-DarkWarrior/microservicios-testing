@@ -93,19 +93,19 @@ public class UsuarioController {
         return new ResponseEntity("El usuario: " + id + " tiene los carros en el taller", HttpStatus.OK);
     }
 
-    private ResponseEntity<List<Carro>> fallbackSaveCarros(@PathVariable("usuarioId") int id, @RequestBody Carro carro, RuntimeException exception) {
+    private ResponseEntity<Carro> fallbackSaveCarros(@PathVariable("usuarioId") int id, @RequestBody Carro carro, RuntimeException exception) {
         return new ResponseEntity("El usuario: " + id + " no puede guardar en el siguiente carro " + carro, HttpStatus.OK);
     }
 
-    private ResponseEntity<List<Carro>> fallbackGetMotos(@PathVariable("usuarioId") int id, RuntimeException exception) {
+    private ResponseEntity<List<Moto>> fallbackGetMotos(@PathVariable("usuarioId") int id, RuntimeException exception) {
         return new ResponseEntity("El usuario: " + id + " tiene las motos en el taller", HttpStatus.OK);
     }
 
-    private ResponseEntity<List<Carro>> fallbackSaveMotos(@PathVariable("usuarioId") int id, @RequestBody Moto moto, RuntimeException exception) {
+    private ResponseEntity<Moto> fallbackSaveMotos(@PathVariable("usuarioId") int id, @RequestBody Moto moto, RuntimeException exception) {
         return new ResponseEntity("El usuario: " + id + " no puede guardar en el siguiente moto " + moto, HttpStatus.OK);
     }
 
-    private ResponseEntity<List<Carro>> fallbackGetTodos(@PathVariable("usuarioId") int id, RuntimeException exception) {
+    private ResponseEntity<Map<String, Object>> fallbackGetTodos(@PathVariable("usuarioId") int id, RuntimeException exception) {
         return new ResponseEntity("El usuario: " + id + " no tiene vehiculos", HttpStatus.OK);
     }
 }

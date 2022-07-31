@@ -9,8 +9,8 @@ import java.util.List;
 @RequestMapping("/moto")
 public interface MotoFeignClient {
     @PostMapping()
-    Moto save(@RequestBody Moto moto);
+    public Moto save(@RequestBody Moto moto);
 
     @GetMapping( "/usuario/{usuarioId}")
-    List<Moto> getMotos(@PathVariable("usuarioId") int usuarioId);
+    public List<Moto> getMotos(@PathVariable("usuarioId") int usuarioId);
 }
